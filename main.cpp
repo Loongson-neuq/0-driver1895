@@ -3,10 +3,17 @@
 // 比较三个数的大小
 void CompareThreeNumbers(int a, int b, int c, Result &result)
 {
-    result.min = std::min({a, b, c});
-   
-    result.max = std::max({a, b, c});
-    
-    result.mid = a + b + c - result.min - result.max;
-	// 在这里完成你的代码
+
+        // 假设 a 是最小值
+        result.min = a;
+        result.max = a;
+
+        if (b < result.min) result.min = b;
+        if (b > result.max) result.max = b;
+
+        if (c < result.min) result.min = c;
+        if (c > result.max) result.max = c;
+
+        // 计算中间值
+        result.mid = a + b + c - result.min - result.max;
 }
