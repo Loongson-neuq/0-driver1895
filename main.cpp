@@ -1,7 +1,12 @@
 #include ".assignment/test.h"
 
-// æ¯”è¾ƒä¸‰ä¸ªæ•°çš„å¤§å°
+// ±È½ÏÈı¸öÊıµÄ´óĞ¡
 void CompareThreeNumbers(int a, int b, int c, Result &result)
 {
-    // åœ¨è¿™é‡Œå®Œæˆä½ çš„ä»£ç 
+    result.min = std::min({a, b, c});
+   
+    result.max = std::max({a, b, c});
+    
+    result.mid = a + b + c - result.min - result.max;
+	// ÔÚÕâÀïÍê³ÉÄãµÄ´úÂë
 }
